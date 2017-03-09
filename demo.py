@@ -9,11 +9,11 @@ for d in data:
 	usedata.append([d[1], d[2], d[3], d[4]])
 
 clustering = kPlusPlus(usedata, 3, 1)
-steps = clustering.iterate(1)
-#print '{} steps'.format(steps)
+steps = clustering.iterate(100)
+print '{} steps'.format(steps)
 centers = clustering.getCenters()
-for i, cen in enumerate(centers):
-	print 'centre {}: {}\n'.format(i,cen.data)
+#for i, cen in enumerate(centers):
+#	print 'centre {}: {}\n'.format(i,cen.data)
 points = clustering.getPoints()
 sucsess = 0
 fails = 0
